@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FunAgency Referral helps approved Referrers track referral activity and eligible commission in a Telegram MiniApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FunAgency Referral">
+  <meta property="og:description" content="Track referral activity and eligible commission in the FunAgency Telegram MiniApp.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ru_RU">
+  <title>FunAgency Referral</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/i18n.js" defer></script>
+  <script src="js/calculator.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content" data-i18n="a11y.skipLink">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="#top" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span>FunAgency <span class="brand-muted">Referral</span></span>
+      </a>
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation" data-i18n-aria-label="a11y.primaryNav">
+        <a href="#calculator" data-i18n="nav.calculator">Calculator</a>
+        <a href="#how-it-works" data-i18n="nav.howItWorks">How it works</a>
+        <a href="#product" data-i18n="nav.product">MiniApp</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      </nav>
+      <div class="header-actions">
+        <div class="language-switcher" role="group" aria-label="Language selector" data-i18n-aria-label="a11y.languageSelector">
+          <button type="button" class="language-button is-active" data-language="en" aria-pressed="true">EN</button>
+          <span aria-hidden="true">/</span>
+          <button type="button" class="language-button" data-language="ru" aria-pressed="false">RU</button>
+        </div>
+        <a class="button button-small button-primary" href="https://t.me/funagency_bot" target="_blank" rel="noreferrer" data-i18n="nav.cta">Become a Referrer</a>
+      </div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-toggle>
+        <span class="sr-only" data-i18n="a11y.openMenu">Open menu</span>
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section-dark" id="top" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow" data-i18n="hero.eyebrow">FUNAGENCY REFERRAL</p>
+          <h1 id="hero-title" data-i18n="hero.title">Refer clients. Track the journey. Earn eligible commission.</h1>
+          <p class="hero-description" data-i18n="hero.description">Introduce clients who need Facebook Ads accounts or services, then follow their journey from referral link to deposit in the FunAgency MiniApp.</p>
+          <p class="hero-support" data-i18n="hero.support">Apply through Telegram, get approved, and receive your unique referral link.</p>
+          <a class="button button-primary" href="https://t.me/funagency_bot" target="_blank" rel="noreferrer" data-i18n="hero.cta">Become a Referrer</a>
+          <p class="approval-note"><span class="status-dot" aria-hidden="true"></span><span data-i18n="hero.approval">Applications are reviewed by FunAgency. MiniApp access is available after approval.</span></p>
+        </div>
+
+        <div class="hero-proof reveal reveal-delay" aria-label="Example Referrer dashboard" data-i18n-aria-label="a11y.dashboard">
+          <div class="product-window">
+            <div class="window-bar"><span></span><span></span><span></span><span class="window-label">FunAgency MiniApp</span></div>
+            <div class="dashboard-shell">
+              <div class="dashboard-heading">
+                <div><p class="mini-label" data-i18n="dashboard.overview">OVERVIEW</p><h2 data-i18n="dashboard.title">Your referral business</h2></div>
+                <span class="dashboard-period" data-i18n="dashboard.period">This month</span>
+              </div>
+              <div class="dashboard-main-stat">
+                <div><p class="mini-label" data-i18n="dashboard.commission">CURRENT COMMISSION</p><strong class="dashboard-number" data-i18n="demo.currentCommission">$1,284.50</strong></div>
+                <span class="trend-chip"><span aria-hidden="true">↗</span> <span data-i18n="demo.illustrative">Illustrative example</span></span>
+              </div>
+              <div class="dashboard-grid">
+                <div class="metric-card"><span data-i18n="dashboard.activeClients">Active clients</span><strong data-i18n="demo.activeClients">18</strong><small data-i18n="demo.illustrative">Illustrative example</small></div>
+                <div class="metric-card"><span data-i18n="dashboard.available">Available balance</span><strong data-i18n="demo.available">$642.25</strong><small data-i18n="dashboard.withdrawable">Available to request</small></div>
+                <div class="metric-card"><span data-i18n="dashboard.onHold">On hold</span><strong data-i18n="demo.onHold">$642.25</strong><small data-i18n="dashboard.fourteenDays">14-day hold</small></div>
+                <div class="metric-card"><span data-i18n="dashboard.rate">Effective rate</span><strong data-i18n="demo.rate">1.0%</strong><small data-i18n="demo.rateContext">Current illustrative rate</small></div>
+              </div>
+              <div class="dashboard-footer-row">
+                <div><p class="mini-label" data-i18n="dashboard.tier">NETWORK TIER</p><strong data-i18n="demo.tier">VIP</strong></div>
+                <div class="progress-track"><span class="progress-fill progress-demo progress-vip"></span></div>
+                <span class="progress-label" data-i18n="demo.tierContext">15+ active clients</span>
+              </div>
+            </div>
+          </div>
+          <p class="visual-caption" data-i18n="demo.disclaimer">Illustrative example. Not company or average performance data.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section calculator-section" id="calculator" aria-labelledby="calculator-title">
+      <div class="container">
+        <div class="section-intro narrow reveal">
+          <p class="eyebrow eyebrow-accent" data-i18n="calculator.eyebrow">COMMISSION CALCULATOR</p>
+          <h2 id="calculator-title" data-i18n="calculator.title">See how the commission calculation works.</h2>
+          <p data-i18n="calculator.description">Your base commission depends on the client’s service fee.</p>
+        </div>
+        <div class="calculator-layout reveal">
+          <form class="calculator-controls" data-calculator-form>
+            <div class="field-group">
+              <label for="deposit" data-i18n="calculator.depositLabel">Client deposit</label>
+              <div class="input-prefix"><span aria-hidden="true">$</span><input id="deposit" name="deposit" type="number" inputmode="decimal" min="0" step="100" value="5000" aria-describedby="deposit-help deposit-error"></div>
+              <p class="field-help" id="deposit-help" data-i18n="calculator.depositHelp">Use an amount for this estimate.</p>
+              <p class="field-error" id="deposit-error" role="alert" hidden></p>
+              <div class="quick-values" role="group" aria-label="Deposit examples" data-i18n-aria-label="calculator.quickValuesLabel">
+                <button type="button" data-deposit="1000">$1k</button>
+                <button type="button" data-deposit="5000">$5k</button>
+                <button type="button" data-deposit="10000">$10k</button>
+                <button type="button" data-deposit="50000">$50k</button>
+              </div>
+            </div>
+            <fieldset class="field-group service-fee-group">
+              <legend data-i18n="calculator.serviceFeeLabel">Client service fee</legend>
+              <div class="fee-options">
+                <label class="fee-option is-selected"><input type="radio" name="serviceFee" value="high" checked><span><strong data-i18n="calculator.feeHigh">&gt;= 5%</strong><small data-i18n="calculator.feeHighRate">1.0% base commission</small></span></label>
+                <label class="fee-option"><input type="radio" name="serviceFee" value="low"><span><strong data-i18n="calculator.feeLow">&lt; 5%</strong><small data-i18n="calculator.feeLowRate">0.5% base commission</small></span></label>
+              </div>
+            </fieldset>
+            <p class="calculator-note" data-i18n="calculator.ruleNote">The base rate is determined by the selected client service fee.</p>
+          </form>
+          <div class="calculation-result" aria-live="polite" aria-atomic="true">
+            <div class="result-header"><div><p class="mini-label" data-i18n="calculator.resultLabel">EXAMPLE CALCULATION</p><h3 data-i18n="calculator.resultTitle">A clear view of the formula</h3></div><span class="example-badge" data-i18n="calculator.exampleBadge">Example</span></div>
+            <div class="formula-stack" aria-label="Commission formula" data-i18n-aria-label="calculator.formulaLabel">
+              <div class="formula-equation">
+                <div class="formula-item"><span data-i18n="calculator.depositResult">Client deposit</span><strong data-result="deposit">$5,000.00</strong></div>
+                <span class="formula-operator" aria-hidden="true">×</span>
+                <div class="formula-item"><span data-i18n="calculator.rateResult">Your commission rate</span><strong data-result="rate">1.0%</strong></div>
+                <span class="formula-operator formula-equals" aria-hidden="true">=</span>
+                <div class="formula-item formula-total"><span data-i18n="calculator.commissionResult">Estimated commission</span><strong data-result="commission">$50.00</strong></div>
+              </div>
+            </div>
+            <p class="result-disclaimer" data-i18n="calculator.disclaimer">Calculation only. Actual commission depends on applicable business rules and recorded client activity. This is not a guarantee of income.</p>
+            <a class="text-link" href="https://t.me/funagency_bot" target="_blank" rel="noreferrer"><span data-i18n="calculator.link">Apply to become a Referrer</span><span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process-section" id="how-it-works" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-intro process-intro reveal">
+          <p class="eyebrow eyebrow-accent" data-i18n="process.eyebrow">HOW IT WORKS</p>
+          <h2 id="process-title" data-i18n="process.title">From application to available commission.</h2>
+          <p data-i18n="process.description">Share your link, follow the referral journey, and track what becomes available in your MiniApp.</p>
+        </div>
+        <ol class="process-flow reveal">
+          <li class="process-step"><span class="step-number">01</span><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 20v-1.5a4.5 4.5 0 0 0-4.5-4.5h-3A4.5 4.5 0 0 0 3 18.5V20"/><circle cx="9" cy="7" r="3"/><path d="M16 11h5m-2.5-2.5V13.5"/></svg></span><h3 data-i18n="process.apply.title">Apply</h3><p data-i18n="process.apply.text">Request to become a Referrer through the FunAgency Telegram Bot.</p></li>
+          <li class="process-step"><span class="step-number">02</span><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2"/><circle cx="6" cy="12" r="2"/><circle cx="18" cy="19" r="2"/><path d="m8 11 8-5m-8 7 8 5"/></svg></span><h3 data-i18n="process.share.title">Share</h3><p data-i18n="process.share.text">After approval, share your unique referral link with your network.</p></li>
+          <li class="process-step"><span class="step-number">03</span><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><path d="M3 20v-1.5A4.5 4.5 0 0 1 7.5 14h3a4.5 4.5 0 0 1 4.5 4.5V20M17 11v6m-3-3h6"/></svg></span><h3 data-i18n="process.refer.title">Refer</h3><p data-i18n="process.refer.text">A potential client starts through your link and provides the requested details.</p></li>
+          <li class="process-step"><span class="step-number">04</span><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v18M17 7.5c0-1.4-1.8-2.5-4-2.5S9 6.1 9 7.5 10.8 10 13 10s4 1.1 4 2.5S15.2 15 13 15s-4-1.1-4-2.5"/><path d="M19 5h2v2m-2-2-3 3"/></svg></span><h3 data-i18n="process.earn.title">Earn</h3><p data-i18n="process.earn.text">When the client deposits, applicable commission is calculated.</p></li>
+          <li class="process-step"><span class="step-number">05</span><span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7h15a2 2 0 0 1 2 2v9H3z"/><path d="M3 7V5h13a2 2 0 0 1 2 2v2H7a2 2 0 0 0-2 2v1h15"/><circle cx="16" cy="13" r="1"/></svg></span><h3 data-i18n="process.withdraw.title">Withdraw</h3><p data-i18n="process.withdraw.text">Once available, commission can be requested for withdrawal.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section tracking-section section-dark" id="tracking" aria-labelledby="tracking-title">
+      <div class="container tracking-grid">
+        <div class="tracking-copy reveal">
+          <p class="eyebrow" data-i18n="tracking.eyebrow">REFERRAL TRACKING</p>
+          <h2 id="tracking-title" data-i18n="tracking.title">One link. Your entire network.</h2>
+          <p data-i18n="tracking.description">See what happens after someone starts through your unique referral link, from the first Bot Start to a client.</p>
+          <ul class="benefit-list">
+            <li data-i18n="tracking.benefitOne">See when someone starts through your link.</li>
+            <li data-i18n="tracking.benefitTwo">Follow leads after they provide GEO and budget information.</li>
+            <li data-i18n="tracking.benefitThree">Understand how referrals progress toward becoming clients.</li>
+          </ul>
+          <p class="tracking-note" data-i18n="tracking.note">The system primarily uses first-touch attribution. Some existing-client cases may require manual handling.</p>
+        </div>
+        <div class="tracking-proof reveal reveal-delay" aria-label="Referral tracking demonstration" data-i18n-aria-label="a11y.tracking">
+          <div class="tracking-link-card">
+            <div><p class="mini-label" data-i18n="tracking.linkLabel">UNIQUE REFERRAL LINK</p><strong>t.me/funagency_bot?start=ref_•••</strong></div>
+            <span class="demo-chip" data-i18n="tracking.demo">UI demonstration</span>
+          </div>
+          <div class="funnel-visual" aria-label="Bot Starts to Leads to Clients funnel" data-i18n-aria-label="a11y.funnel">
+            <div class="funnel-stage"><span class="funnel-marker">01</span><div><small data-i18n="tracking.stageOneLabel">STAGE ONE</small><strong data-i18n="tracking.botStarts">Bot Starts</strong></div></div>
+            <span class="funnel-arrow" aria-hidden="true">↓</span>
+            <div class="funnel-stage"><span class="funnel-marker">02</span><div><small data-i18n="tracking.stageTwoLabel">STAGE TWO</small><strong data-i18n="tracking.leads">Leads</strong></div></div>
+            <span class="funnel-arrow" aria-hidden="true">↓</span>
+            <div class="funnel-stage funnel-stage-active"><span class="funnel-marker">03</span><div><small data-i18n="tracking.stageThreeLabel">STAGE THREE</small><strong data-i18n="tracking.clients">Clients</strong></div></div>
+          </div>
+          <p class="visual-caption" data-i18n="tracking.caption">Demonstration flow. No live performance figures shown.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section showcase-section" id="product" aria-labelledby="showcase-title">
+      <div class="container showcase-grid">
+        <div class="showcase-copy reveal">
+          <p class="eyebrow eyebrow-accent" data-i18n="showcase.eyebrow">THE REFERRER MINIAPP</p>
+          <h2 id="showcase-title" data-i18n="showcase.title">Your referral business has a place to work.</h2>
+          <p data-i18n="showcase.description">Approved Referrers use one MiniApp to understand earnings, network health and what converts.</p>
+          <div class="showcase-tabs" role="tablist" aria-label="MiniApp views" data-i18n-aria-label="a11y.showcaseTabs">
+            <button type="button" class="showcase-tab is-active" role="tab" aria-selected="true" aria-controls="showcase-home" data-showcase-tab="home" data-i18n="showcase.tabHome">Earnings</button>
+            <button type="button" class="showcase-tab" role="tab" aria-selected="false" aria-controls="showcase-network" data-showcase-tab="network" data-i18n="showcase.tabNetwork">Network</button>
+            <button type="button" class="showcase-tab" role="tab" aria-selected="false" aria-controls="showcase-stats" data-showcase-tab="stats" data-i18n="showcase.tabStats">Stats</button>
+          </div>
+        </div>
+        <div class="showcase-proof reveal reveal-delay" aria-label="FunAgency MiniApp product demonstration" data-i18n-aria-label="a11y.showcase">
+          <div class="product-window showcase-window">
+            <div class="window-bar"><span></span><span></span><span></span><span class="window-label">FunAgency MiniApp</span></div>
+            <div class="showcase-shell">
+              <div class="showcase-topline"><div><p class="mini-label" data-i18n="showcase.overview">REFERRER OVERVIEW</p><h3 data-i18n="showcase.panelTitle">See the signals that matter.</h3></div><span class="demo-chip" data-i18n="showcase.demo">UI demonstration</span></div>
+              <div class="showcase-panel is-active" id="showcase-home" role="tabpanel" data-showcase-panel="home">
+                <div class="showcase-hero-metric"><span data-i18n="showcase.monthlyCommission">Monthly commission</span><strong data-i18n="demo.currentCommission">$1,284.50</strong><small data-i18n="demo.trend">+18.4% vs last month · Illustrative example</small></div>
+                <div class="showcase-metrics"><div><span data-i18n="showcase.effectiveRate">Effective rate</span><strong data-i18n="demo.rate">1.0%</strong></div><div><span data-i18n="showcase.available">Available</span><strong data-i18n="demo.available">$642.25</strong></div><div><span data-i18n="showcase.onHold">On hold</span><strong data-i18n="demo.onHold">$642.25</strong></div><div><span data-i18n="showcase.activeClients">Active clients</span><strong data-i18n="demo.activeClients">18</strong></div></div>
+              </div>
+              <div class="showcase-panel" id="showcase-network" role="tabpanel" data-showcase-panel="network" hidden>
+                <div class="network-header"><span data-i18n="showcase.networkTitle">Network health</span><span class="demo-chip" data-i18n="showcase.statusDemo">Status view</span></div>
+                <div class="network-status-list"><div><span class="status-pill status-new" data-i18n="showcase.statusNew">New</span><strong data-i18n="showcase.statusNewText">Recently started</strong></div><div><span class="status-pill status-active" data-i18n="showcase.statusActive">Active</span><strong data-i18n="showcase.statusActiveText">Currently engaged</strong></div><div><span class="status-pill status-risk" data-i18n="showcase.statusRisk">At Risk</span><strong data-i18n="showcase.statusRiskText">Needs attention</strong></div></div>
+              </div>
+              <div class="showcase-panel" id="showcase-stats" role="tabpanel" data-showcase-panel="stats" hidden>
+                <div class="network-header"><span data-i18n="showcase.statsTitle">Performance signals</span><span class="demo-chip" data-i18n="showcase.funnelDemo">Funnel view</span></div>
+                <div class="mini-funnel"><div><strong data-i18n="demo.botStarts">64</strong><span data-i18n="showcase.botStarts">Bot Starts</span></div><i aria-hidden="true">→</i><div><strong data-i18n="demo.leads">28</strong><span data-i18n="showcase.leads">Leads</span></div><i aria-hidden="true">→</i><div><strong data-i18n="demo.clients">18</strong><span data-i18n="showcase.clients">Clients</span></div></div>
+                <p class="panel-helper" data-i18n="showcase.statsHelper">Understand what converts with funnel and commission history views.</p>
+              </div>
+            </div>
+          </div>
+          <p class="visual-caption" data-i18n="showcase.caption">Illustrative product view. Values are intentionally not populated.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section grow-section" id="grow" aria-labelledby="grow-title">
+      <div class="container">
+        <div class="section-intro grow-intro reveal">
+          <p class="eyebrow eyebrow-accent" data-i18n="grow.eyebrow">GROW &amp; UNLOCK</p>
+          <h2 id="grow-title" data-i18n="grow.title">The more you build, the more you unlock.</h2>
+          <p data-i18n="grow.description">Two separate systems help you understand progress: tiers show network growth, while achievements can unlock commission-rate boosts.</p>
+        </div>
+        <div class="progression-grid">
+          <article class="progression-panel tier-panel reveal">
+            <div class="progression-heading"><div><p class="mini-label" data-i18n="grow.tierLabel">NETWORK PROGRESSION</p><h3 data-i18n="grow.tierTitle">Tier progression</h3></div><span class="system-tag" data-i18n="grow.networkSystem">Network system</span></div>
+            <p class="progression-copy" data-i18n="grow.tierCopy">Build an active client network and see your current tier move with your network.</p>
+            <div class="tier-rail" aria-label="Starter to Growth to VIP progression" data-i18n-aria-label="a11y.tierRail">
+              <div class="tier-node"><span class="tier-dot">01</span><strong data-i18n="grow.starter">Starter</strong><small data-i18n="grow.starterRange">0–4 active clients</small></div>
+              <span class="tier-connector" aria-hidden="true"></span>
+              <div class="tier-node"><span class="tier-dot">02</span><strong data-i18n="grow.growth">Growth</strong><small data-i18n="grow.growthRange">5–14 active clients</small></div>
+              <span class="tier-connector" aria-hidden="true"></span>
+              <div class="tier-node"><span class="tier-dot">03</span><strong data-i18n="grow.vip">VIP</strong><small data-i18n="grow.vipRange">15+ active clients</small></div>
+            </div>
+            <p class="system-note" data-i18n="grow.tierNote">Tier shows network progression. Tier itself does not directly increase the commission rate.</p>
+          </article>
+          <article class="progression-panel boost-panel reveal reveal-delay">
+            <div class="progression-heading"><div><p class="mini-label" data-i18n="grow.boostLabel">ACHIEVEMENT PROGRESSION</p><h3 data-i18n="grow.boostTitle">Unlock rate boosts</h3></div><span class="system-tag" data-i18n="grow.achievementSystem">Achievement system</span></div>
+            <p class="progression-copy" data-i18n="grow.boostCopy">Achievements can provide recognition, rewards or commission-rate boosts when unlocked.</p>
+            <div class="boost-list" aria-label="Achievement boost examples" data-i18n-aria-label="a11y.boostList">
+              <div class="boost-row"><span class="boost-status">+</span><div><strong>Early Bird</strong><small data-i18n="grow.earlyBird">Permanent boost documented in the program</small></div><em>+0.1%</em></div>
+              <div class="boost-row"><span class="boost-status">+</span><div><strong>Network Legend</strong><small data-i18n="grow.networkLegend">Permanent boost documented in the program</small></div><em>+0.2%</em></div>
+              <div class="boost-row"><span class="boost-status">+</span><div><strong>Growing Network</strong><small data-i18n="grow.growingNetwork">30 days from unlock</small></div><em>+0.1%</em></div>
+            </div>
+            <p class="system-note" data-i18n="grow.boostNote">Commission-rate boosts come from achievements, not from reaching a tier.</p>
+          </article>
+        </div>
+        <p class="needs-input-note" data-i18n="grow.needsInput">[NEEDS BUSINESS INPUT: Confirm how achievement boosts and the documented maximum rate apply when the client service fee is below 5%.]</p>
+      </div>
+    </section>
+
+    <section class="section wallet-section section-dark" id="wallet" aria-labelledby="wallet-title">
+      <div class="container wallet-grid">
+        <div class="wallet-copy reveal">
+          <p class="eyebrow" data-i18n="wallet.eyebrow">WALLET &amp; PAYOUT TRANSPARENCY</p>
+          <h2 id="wallet-title" data-i18n="wallet.title">Know where every commission stands.</h2>
+          <p data-i18n="wallet.description">The Wallet shows how commission moves from recorded activity toward an available balance, with the details needed to understand each step.</p>
+          <div class="wallet-facts">
+            <div><span data-i18n="wallet.minimumLabel">Minimum withdrawal</span><strong>$20</strong></div>
+            <div><span data-i18n="wallet.feeLabel">Network fee</span><strong>$1</strong></div>
+            <div><span data-i18n="wallet.methodLabel">Payment method</span><strong>USDT TRC20</strong></div>
+          </div>
+        </div>
+        <div class="wallet-proof reveal reveal-delay" aria-label="Wallet and withdrawal demonstration" data-i18n-aria-label="a11y.wallet">
+          <div class="wallet-pipeline" aria-label="Commission lifecycle" data-i18n-aria-label="a11y.walletPipeline">
+            <div class="wallet-timeline-line" aria-hidden="true"></div>
+            <div class="wallet-stage"><span>01</span><strong data-i18n="wallet.recorded">Recorded</strong><small data-i18n="wallet.recordedText">Activity captured</small></div>
+            <div class="wallet-stage"><span>02</span><strong data-i18n="wallet.confirmed">Confirmed</strong><small data-i18n="wallet.confirmedText">Commission recognized</small></div>
+            <div class="wallet-stage wallet-stage-hold"><span>03</span><strong data-i18n="wallet.hold">14-day Hold</strong><small data-i18n="wallet.holdText">Unlock timing visible</small></div>
+            <div class="wallet-stage wallet-stage-available"><span>04</span><strong data-i18n="wallet.available">Available</strong><small data-i18n="wallet.availableText">Ready to request</small></div>
+            <div class="wallet-stage"><span>05</span><strong data-i18n="wallet.withdraw">Withdraw</strong><small data-i18n="wallet.withdrawText">Request from Wallet</small></div>
+          </div>
+          <div class="wallet-detail-grid">
+            <div class="wallet-balance-card"><p class="mini-label" data-i18n="wallet.balanceLabel">WALLET BALANCE</p><div><span data-i18n="wallet.availableBalance">Available balance</span><strong data-i18n="demo.available">$642.25</strong></div><div><span data-i18n="wallet.onHoldBalance">On hold</span><strong data-i18n="demo.onHold">$642.25</strong></div><p data-i18n="demo.illustrative">Illustrative example</p></div>
+            <div class="transaction-card"><div class="transaction-heading"><p class="mini-label" data-i18n="wallet.historyLabel">TRANSACTION HISTORY</p><span class="demo-chip" data-i18n="demo.illustrative">Illustrative example</span></div><div class="transaction-row"><span class="transaction-icon" aria-hidden="true">+</span><div><strong data-i18n="wallet.commissionTransaction">Commission</strong><small data-i18n="wallet.transactionDetail">Client deposit · 1.0% rate · available after hold</small></div><b data-i18n="demo.transactionCommission">+$128.45</b></div><div class="transaction-row"><span class="transaction-icon" aria-hidden="true">↗</span><div><strong data-i18n="wallet.withdrawalTransaction">Withdrawal</strong><small data-i18n="wallet.txDetail">Completed · USDT TRC20 · TX 7A3F…91C2</small></div><b data-i18n="demo.transactionWithdrawal">-$100.00</b></div></div>
+          </div>
+          <p class="visual-caption" data-i18n="demo.illustrative">Illustrative example</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq" aria-labelledby="faq-title">
+      <div class="faq-container">
+        <div class="section-intro faq-intro reveal"><p class="eyebrow eyebrow-accent" data-i18n="faq.eyebrow">FAQ</p><h2 id="faq-title" data-i18n="faq.title">Clear answers before you apply.</h2></div>
+        <div class="faq-list reveal">
+          <div class="faq-item is-open"><h3><button type="button" class="faq-question" aria-expanded="true" aria-controls="faq-answer-1" id="faq-question-1"><span data-i18n="faq.q1">How do I become a Referrer?</span><span aria-hidden="true">+</span></button></h3><div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1"><p data-i18n="faq.a1">Request to become a Referrer through the FunAgency Telegram Bot. FunAgency reviews the request, and MiniApp access is available after approval.</p></div></div>
+          <div class="faq-item"><h3><button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-2" id="faq-question-2"><span data-i18n="faq.q2">How much commission do I earn?</span><span aria-hidden="true">+</span></button></h3><div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2" hidden><p data-i18n="faq.a2">Commission is calculated from eligible client deposits using the applicable base commission rate and any active achievement boosts. Results shown on this page are examples, not guaranteed income.</p></div></div>
+          <div class="faq-item"><h3><button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-3" id="faq-question-3"><span data-i18n="faq.q3">How is commission calculated?</span><span aria-hidden="true">+</span></button></h3><div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3" hidden><p data-i18n="faq.a3">Estimated commission equals the client deposit multiplied by the effective commission rate.</p></div></div>
+          <div class="faq-item"><h3><button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-4" id="faq-question-4"><span data-i18n="faq.q4">Why can the base rate be 0.5% or 1%?</span><span aria-hidden="true">+</span></button></h3><div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-question-4" hidden><p data-i18n="faq.a4">The base rate depends on the client service fee: 1.0% when the fee is 5% or more, and 0.5% when the fee is below 5%.</p></div></div>
+          <div class="faq-item"><h3><button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-5" id="faq-question-5"><span data-i18n="faq.q5">Can I increase my commission rate?</span><span aria-hidden="true">+</span></button></h3><div class="faq-answer" id="faq-answer-5" role="region" aria-labelledby="faq-question-5" hidden><p data-i18n="faq.a5">Achievement-based boosts can increase the effective rate after they are unlocked. How boosts apply to the 0.5% base path is [NEEDS BUSINESS INPUT].</p></div></div>
+          <div class="faq-item"><h3><button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-6" id="faq-question-6"><span data-i18n="faq.q6">How are referrals tracked?</span><span aria-hidden="true">+</span></button></h3><div class="faq-answer" id="faq-answer-6" role="region" aria-labelledby="faq-question-6" hidden><p data-i18n="faq.a6">The system primarily uses first-touch attribution and tracks the journey from Bot Starts to Leads to Clients. Some existing-client cases may require manual handling.</p></div></div>
+          <div class="faq-item"><h3><button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-7" id="faq-question-7"><span data-i18n="faq.q7">When does commission become available?</span><span aria-hidden="true">+</span></button></h3><div class="faq-answer" id="faq-answer-7" role="region" aria-labelledby="faq-question-7" hidden><p data-i18n="faq.a7">New commission enters a 14-day hold. After the hold is completed, it becomes available according to the documented withdrawal process.</p></div></div>
+          <div class="faq-item"><h3><button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-8" id="faq-question-8"><span data-i18n="faq.q8">What is the minimum withdrawal?</span><span aria-hidden="true">+</span></button></h3><div class="faq-answer" id="faq-answer-8" role="region" aria-labelledby="faq-question-8" hidden><p data-i18n="faq.a8">The current minimum withdrawal is $20. A $1 network fee is deducted from the requested amount, and the payment method is USDT TRC20.</p></div></div>
+          <div class="faq-item"><h3><button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-9" id="faq-question-9"><span data-i18n="faq.q9">How do I receive my money?</span><span aria-hidden="true">+</span></button></h3><div class="faq-answer" id="faq-answer-9" role="region" aria-labelledby="faq-question-9" hidden><p data-i18n="faq.a9">Once commission is available, request a withdrawal from the MiniApp. Withdrawals are reviewed and processed by FunAgency through USDT TRC20.</p></div></div>
+          <div class="faq-item"><h3><button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-10" id="faq-question-10"><span data-i18n="faq.q10">Can I track my referred clients?</span><span aria-hidden="true">+</span></button></h3><div class="faq-answer" id="faq-answer-10" role="region" aria-labelledby="faq-question-10" hidden><p data-i18n="faq.a10">Yes. The MiniApp can show client statuses including New, Active, Cooling, At Risk and Churned.</p></div></div>
+          <div class="faq-item"><h3><button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-11" id="faq-question-11"><span data-i18n="faq.q11">Does VIP automatically increase my commission?</span><span aria-hidden="true">+</span></button></h3><div class="faq-answer" id="faq-answer-11" role="region" aria-labelledby="faq-question-11" hidden><p data-i18n="faq.a11">No. Starter, Growth and VIP describe network progression. Commission-rate increases come from achievement boosts, not from tier alone.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta-section section-dark" id="final-cta" aria-labelledby="final-cta-title">
+      <div class="container final-cta-content reveal"><p class="eyebrow" data-i18n="final.eyebrow">READY TO APPLY?</p><h2 id="final-cta-title" data-i18n="final.title">Become a FunAgency Referrer.</h2><p data-i18n="final.description">Request access through the FunAgency Telegram Bot. Applications are reviewed by FunAgency, and approval is not automatic.</p><a class="button button-primary" href="https://t.me/funagency_bot" target="_blank" rel="noreferrer" data-i18n="final.cta">Become a Referrer</a></div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div><a class="brand" href="#top" data-i18n-aria-label="a11y.home"><span class="brand-mark" aria-hidden="true">F</span><span>FunAgency <span class="brand-muted">Referral</span></span></a><p data-i18n="footer.note">Referral tracking and MiniApp access for approved Referrers.</p></div>
+      <nav class="footer-nav" aria-label="Footer navigation" data-i18n-aria-label="a11y.footerNav"><a href="#how-it-works" data-i18n="nav.howItWorks">How it works</a><a href="#tracking" data-i18n="nav.tracking">Tracking</a><a href="#wallet" data-i18n="nav.wallet">Wallet</a><a href="#faq" data-i18n="nav.faq">FAQ</a></nav>
+      <div class="footer-meta"><div class="language-switcher" role="group" aria-label="Language selector" data-i18n-aria-label="a11y.languageSelector"><button type="button" class="language-button" data-language="en" aria-pressed="false">EN</button><span aria-hidden="true">/</span><button type="button" class="language-button" data-language="ru" aria-pressed="false">RU</button></div><span class="footer-placeholder" data-i18n="footer.terms">Terms: [NEEDS BUSINESS INPUT]</span><span class="footer-placeholder" data-i18n="footer.privacy">Privacy: [NEEDS BUSINESS INPUT]</span><span class="footer-placeholder" data-i18n="footer.contact">Contact: [NEEDS BUSINESS INPUT]</span></div>
+    </div>
+  </footer>
+</body>
+</html>
