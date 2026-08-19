@@ -21,23 +21,6 @@
       });
     }
 
-    const showcaseTabs = document.querySelectorAll('[data-showcase-tab]');
-    const showcasePanels = document.querySelectorAll('[data-showcase-panel]');
-    showcaseTabs.forEach((tab) => {
-      tab.addEventListener('click', () => {
-        const selectedView = tab.dataset.showcaseTab;
-        showcaseTabs.forEach((item) => {
-          const isSelected = item === tab;
-          item.classList.toggle('is-active', isSelected);
-          item.setAttribute('aria-selected', String(isSelected));
-        });
-        showcasePanels.forEach((panel) => {
-          panel.hidden = panel.dataset.showcasePanel !== selectedView;
-          panel.classList.toggle('is-active', !panel.hidden);
-        });
-      });
-    });
-
     document.querySelectorAll('.faq-question').forEach((question) => {
       question.addEventListener('click', () => {
         const item = question.closest('.faq-item');
