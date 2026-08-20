@@ -1,15 +1,15 @@
 (() => {
   const getCurrencyFormatter = () => new Intl.NumberFormat(
     window.FunAgencyI18n?.getLanguage() === 'ru' ? 'ru-RU' : 'en-US',
-    { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 }
+    { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 }
   );
 
   const getElements = () => ({
     form: document.querySelector('[data-calculator-form]'),
     deposit: document.querySelector('#deposit'),
-    rateOutput: document.querySelector('[data-result="rate"]'),
-    depositOutput: document.querySelector('[data-result="deposit"]'),
-    commissionOutput: document.querySelector('[data-result="commission"]'),
+    rateOutputs: [...document.querySelectorAll('[data-result="rate"]')],
+    depositOutputs: [...document.querySelectorAll('[data-result="deposit"]')],
+    yearlyOutputs: [...document.querySelectorAll('[data-result="yearly"]')],
     error: document.querySelector('#deposit-error'),
     feeOptions: [...document.querySelectorAll('input[name="serviceFee"]')],
     quickValues: [...document.querySelectorAll('[data-deposit]')]
@@ -25,22 +25,25 @@
     return null;
   };
 
+  const setAll = (elements, text) => elements.forEach((el) => { el.textContent = text; });
+
   const updateCalculator = () => {
     const elements = getElements();
-    if (!elements.deposit || !elements.rateOutput) return;
+    if (!elements.deposit || elements.rateOutputs.length === 0) return;
 
     const rawValue = elements.deposit.value;
     const errorKey = getErrorKey(rawValue);
     const parsedDeposit = Number.parseFloat(rawValue);
-    const deposit = errorKey ? 0 : parsedDeposit;
+    const monthlyDeposit = errorKey ? 0 : parsedDeposit;
     const selectedFee = elements.feeOptions.find((option) => option.checked)?.value || 'high';
     const baseRate = getBaseRate(selectedFee);
-    const commission = deposit * (baseRate / 100);
+    const monthlyCommission = monthlyDeposit * (baseRate / 100);
+    const yearlyCommission = monthlyCommission * 12;
     const currencyFormatter = getCurrencyFormatter();
 
-    elements.depositOutput.textContent = currencyFormatter.format(deposit);
-    elements.rateOutput.textContent = `${baseRate.toFixed(1)}%`;
-    elements.commissionOutput.textContent = currencyFormatter.format(commission);
+    setAll(elements.depositOutputs, currencyFormatter.format(monthlyDeposit));
+    setAll(elements.rateOutputs, `${baseRate.toFixed(1)}%`);
+    setAll(elements.yearlyOutputs, currencyFormatter.format(yearlyCommission));
     elements.deposit.setAttribute('aria-invalid', String(Boolean(errorKey)));
     if (elements.error) {
       elements.error.textContent = errorKey ? window.FunAgencyI18n.getTranslation(window.FunAgencyI18n.getLanguage(), errorKey) : '';
