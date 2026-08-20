@@ -484,11 +484,6 @@ input:focus-visible {
   line-height: 1;
 }
 
-.trend-chip {
-  color: var(--color-accent-dark);
-  font-size: 10px;
-}
-
 .dashboard-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1328,18 +1323,6 @@ input:focus-visible {
   font-weight: 500;
 }
 
-.demo-chip {
-  display: inline-flex;
-  flex-shrink: 0;
-  align-items: center;
-  padding: 6px 9px;
-  border: 1px solid rgba(125, 209, 193, 0.3);
-  border-radius: 999px;
-  color: #9fd8cc;
-  font-size: 9px;
-  white-space: nowrap;
-}
-
 .funnel-visual {
   display: grid;
   gap: 12px;
@@ -1654,14 +1637,6 @@ input:focus-visible {
   font-size: 12px;
   font-style: normal;
   font-weight: 600;
-}
-
-.needs-input-note {
-  max-width: 900px;
-  margin: 24px 0 0;
-  color: #8d5315;
-  font-size: 10px;
-  line-height: 1.55;
 }
 
 .wallet-section {
@@ -2458,13 +2433,6 @@ input:focus-visible {
   .hero-proof .product-window {
     animation: none;
   }
-}
-
-.demo-chip {
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
 }
 
 @media (max-width: 520px) {
