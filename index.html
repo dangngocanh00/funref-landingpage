@@ -270,15 +270,49 @@
         <div class="wallet-proof reveal reveal-delay" aria-label="Wallet and withdrawal demonstration" data-i18n-aria-label="a11y.wallet">
           <div class="wallet-pipeline" aria-label="Commission lifecycle" data-i18n-aria-label="a11y.walletPipeline">
             <div class="wallet-timeline-line" aria-hidden="true"></div>
-            <div class="wallet-stage"><span>01</span><strong data-i18n="wallet.recorded">Recorded</strong><small data-i18n="wallet.recordedText">Activity captured</small></div>
-            <div class="wallet-stage"><span>02</span><strong data-i18n="wallet.confirmed">Confirmed</strong><small data-i18n="wallet.confirmedText">Commission recognized</small></div>
-            <div class="wallet-stage wallet-stage-hold"><span>03</span><strong data-i18n="wallet.hold">14-day Hold</strong><small data-i18n="wallet.holdText">Unlock timing visible</small></div>
-            <div class="wallet-stage wallet-stage-available"><span>04</span><strong data-i18n="wallet.available">Available</strong><small data-i18n="wallet.availableText">Ready to request</small></div>
-            <div class="wallet-stage"><span>05</span><strong data-i18n="wallet.withdraw">Withdraw</strong><small data-i18n="wallet.withdrawText">Request from Wallet</small></div>
+            <div class="wallet-stage wallet-stage-done">
+              <span class="wallet-stage-dot" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>
+              <span class="wallet-stage-number" aria-hidden="true">01</span>
+              <strong data-i18n="wallet.recorded">Recorded</strong>
+              <small data-i18n="wallet.recordedText">Activity captured</small>
+            </div>
+            <div class="wallet-stage wallet-stage-done">
+              <span class="wallet-stage-dot" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>
+              <span class="wallet-stage-number" aria-hidden="true">02</span>
+              <strong data-i18n="wallet.confirmed">Confirmed</strong>
+              <small data-i18n="wallet.confirmedText">Commission recognized</small>
+            </div>
+            <div class="wallet-stage wallet-stage-hold">
+              <span class="wallet-stage-dot" aria-hidden="true"></span>
+              <span class="wallet-stage-number" aria-hidden="true">03</span>
+              <strong data-i18n="wallet.hold">14-day Hold</strong>
+              <small data-i18n="wallet.holdText">Unlock timing visible</small>
+              <span class="wallet-stage-pill" data-i18n="wallet.inProgress">In progress</span>
+            </div>
+            <div class="wallet-stage">
+              <span class="wallet-stage-dot" aria-hidden="true"></span>
+              <span class="wallet-stage-number" aria-hidden="true">04</span>
+              <strong data-i18n="wallet.available">Available</strong>
+              <small data-i18n="wallet.availableText">Ready to request</small>
+            </div>
+            <div class="wallet-stage">
+              <span class="wallet-stage-dot" aria-hidden="true"></span>
+              <span class="wallet-stage-number" aria-hidden="true">05</span>
+              <strong data-i18n="wallet.withdraw">Withdraw</strong>
+              <small data-i18n="wallet.withdrawText">Request from Wallet</small>
+            </div>
           </div>
           <div class="wallet-detail-grid">
-            <div class="wallet-balance-card"><p class="mini-label" data-i18n="wallet.balanceLabel">WALLET BALANCE</p><div><span data-i18n="wallet.availableBalance">Available balance</span><strong data-i18n="demo.available">$642.25</strong></div><div><span data-i18n="wallet.onHoldBalance">On hold</span><strong data-i18n="demo.onHold">$642.25</strong></div></div>
-            <div class="transaction-card"><div class="transaction-heading"><p class="mini-label" data-i18n="wallet.historyLabel">TRANSACTION HISTORY</p></div><div class="transaction-row"><span class="transaction-icon" aria-hidden="true">+</span><div><strong data-i18n="wallet.commissionTransaction">Commission</strong><small data-i18n="wallet.transactionDetail">Client deposit · 1.0% rate · available after hold</small></div><b data-i18n="demo.transactionCommission">+$128.45</b></div><div class="transaction-row"><span class="transaction-icon" aria-hidden="true">↗</span><div><strong data-i18n="wallet.withdrawalTransaction">Withdrawal</strong><small data-i18n="wallet.txDetail">Completed · USDT TRC20 · TX 7A3F…91C2</small></div><b data-i18n="demo.transactionWithdrawal">-$100.00</b></div></div>
+            <div class="wallet-balance-card">
+              <p class="mini-label"><span class="wallet-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg></span><span data-i18n="wallet.balanceLabel">WALLET BALANCE</span></p>
+              <div class="wallet-balance-row wallet-balance-row-primary"><span data-i18n="wallet.availableBalance">Available balance</span><strong data-i18n="demo.available">$642.25</strong></div>
+              <div class="wallet-balance-row"><span data-i18n="wallet.onHoldBalance">On hold</span><strong data-i18n="demo.onHold">$642.25</strong></div>
+            </div>
+            <div class="transaction-card">
+              <div class="transaction-heading"><p class="mini-label"><span class="wallet-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span><span data-i18n="wallet.historyLabel">TRANSACTION HISTORY</span></p></div>
+              <div class="transaction-row"><span class="transaction-icon transaction-icon-earn" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14"/><path d="M5 12h14"/></svg></span><div><strong data-i18n="wallet.commissionTransaction">Commission</strong><small data-i18n="wallet.transactionDetail">Client deposit · 1.0% rate · available after hold</small></div><b class="transaction-amount-earn" data-i18n="demo.transactionCommission">+$128.45</b></div>
+              <div class="transaction-row"><span class="transaction-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg></span><div><strong data-i18n="wallet.withdrawalTransaction">Withdrawal</strong><small data-i18n="wallet.txDetail">Completed · USDT TRC20 · TX 7A3F…91C2</small></div><b data-i18n="demo.transactionWithdrawal">-$100.00</b></div>
+            </div>
           </div>
         </div>
       </div>
