@@ -156,7 +156,7 @@
       </div>
     </section>
 
-    <section class="section tracking-section section-dark" id="tracking" aria-labelledby="tracking-title">
+    <section class="section tracking-section" id="tracking" aria-labelledby="tracking-title">
       <div class="container tracking-grid">
         <div class="tracking-copy reveal">
           <p class="eyebrow" data-i18n="tracking.eyebrow">REFERRAL TRACKING</p>
@@ -171,14 +171,53 @@
         </div>
         <div class="tracking-proof reveal reveal-delay" aria-label="Referral tracking demonstration" data-i18n-aria-label="a11y.tracking">
           <div class="tracking-link-card">
-            <div><p class="mini-label" data-i18n="tracking.linkLabel">UNIQUE REFERRAL LINK</p><strong>t.me/funagency_bot?start=ref_•••</strong></div>
+            <p class="mini-label" data-i18n="tracking.linkLabel">YOUR UNIQUE REFERRAL LINK</p>
+            <div class="tracking-link-row">
+              <span class="tracking-link-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 17H7A5 5 0 0 1 7 7h2"/><path d="M15 7h2a5 5 0 1 1 0 10h-2"/><line x1="8" x2="16" y1="12" y2="12"/></svg></span>
+              <strong class="tracking-link-url">t.me/funagency_bot?start=ref_•••</strong>
+              <button type="button" class="copy-button" data-copy-button data-copy-text="t.me/funagency_bot?start=ref_•••" data-i18n-aria-label="tracking.copyAriaLabel">
+                <svg class="copy-icon" viewBox="0 0 24 24" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                <span data-copy-label data-i18n="tracking.copyButton" aria-live="polite">Copy</span>
+              </button>
+            </div>
+            <p class="tracking-link-help" data-i18n="tracking.linkHelp">Share this link to bring new clients to FunAgency.</p>
           </div>
           <div class="funnel-visual" aria-label="Bot Starts to Leads to Clients funnel" data-i18n-aria-label="a11y.funnel">
-            <div class="funnel-stage"><span class="funnel-marker">01</span><div><small data-i18n="tracking.stageOneLabel">STAGE ONE</small><strong data-i18n="tracking.botStarts">Bot Starts</strong></div></div>
-            <span class="funnel-arrow" aria-hidden="true">↓</span>
-            <div class="funnel-stage"><span class="funnel-marker">02</span><div><small data-i18n="tracking.stageTwoLabel">STAGE TWO</small><strong data-i18n="tracking.leads">Leads</strong></div></div>
-            <span class="funnel-arrow" aria-hidden="true">↓</span>
-            <div class="funnel-stage funnel-stage-active"><span class="funnel-marker">03</span><div><small data-i18n="tracking.stageThreeLabel">STAGE THREE</small><strong data-i18n="tracking.clients">Clients</strong></div></div>
+            <div class="funnel-stage">
+              <div class="funnel-stage-marker">
+                <span class="funnel-number" aria-hidden="true">01</span>
+                <span class="funnel-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></span>
+              </div>
+              <div class="funnel-stage-content">
+                <small data-i18n="tracking.stageOneLabel">STAGE ONE</small>
+                <strong data-i18n="tracking.botStarts">Bot Starts</strong>
+                <p data-i18n="tracking.botStartsText">Someone clicks your referral link and starts the FunAgency bot.</p>
+              </div>
+            </div>
+            <div class="funnel-connector" aria-hidden="true"><span class="funnel-connector-line"></span><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div>
+            <div class="funnel-stage">
+              <div class="funnel-stage-marker">
+                <span class="funnel-number" aria-hidden="true">02</span>
+                <span class="funnel-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+              </div>
+              <div class="funnel-stage-content">
+                <small data-i18n="tracking.stageTwoLabel">STAGE TWO</small>
+                <strong data-i18n="tracking.leads">Leads</strong>
+                <p data-i18n="tracking.leadsText">They share GEO and budget details and become a lead.</p>
+              </div>
+            </div>
+            <div class="funnel-connector" aria-hidden="true"><span class="funnel-connector-line"></span><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div>
+            <div class="funnel-stage funnel-stage-active">
+              <div class="funnel-stage-marker">
+                <span class="funnel-number" aria-hidden="true">03</span>
+                <span class="funnel-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg></span>
+              </div>
+              <div class="funnel-stage-content">
+                <small data-i18n="tracking.stageThreeLabel">STAGE THREE</small>
+                <strong data-i18n="tracking.clients">Clients</strong>
+                <p data-i18n="tracking.clientsText">The lead becomes a client, and eligible commission is calculated.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

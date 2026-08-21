@@ -21,6 +21,33 @@
       });
     }
 
+    document.querySelectorAll('[data-copy-button]').forEach((button) => {
+      const label = button.querySelector('[data-copy-label]');
+      let resetTimer = null;
+
+      button.addEventListener('click', async () => {
+        const text = button.dataset.copyText || '';
+
+        try {
+          await navigator.clipboard.writeText(text);
+        } catch (error) {
+          return;
+        }
+
+        if (!label) return;
+        const language = window.FunAgencyI18n?.getLanguage() || 'en';
+        label.textContent = window.FunAgencyI18n?.getTranslation(language, 'tracking.copyButtonCopied') || 'Copied';
+        button.classList.add('is-copied');
+
+        clearTimeout(resetTimer);
+        resetTimer = setTimeout(() => {
+          const currentLanguage = window.FunAgencyI18n?.getLanguage() || 'en';
+          label.textContent = window.FunAgencyI18n?.getTranslation(currentLanguage, 'tracking.copyButton') || 'Copy';
+          button.classList.remove('is-copied');
+        }, 2000);
+      });
+    });
+
     document.querySelectorAll('.faq-question').forEach((question) => {
       question.addEventListener('click', () => {
         const item = question.closest('.faq-item');
