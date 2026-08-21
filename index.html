@@ -13,10 +13,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/i18n.js" defer></script>
-  <script src="js/calculator.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <link rel="stylesheet" href="css/style.css?v=2">
+  <script src="js/i18n.js?v=2" defer></script>
+  <script src="js/calculator.js?v=2" defer></script>
+  <script src="js/main.js?v=2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content" data-i18n="a11y.skipLink">Skip to content</a>
@@ -98,16 +98,16 @@
         <div class="calculator-layout reveal">
           <form class="calculator-controls" data-calculator-form>
             <div class="field-group">
-              <label for="deposit" data-i18n="calculator.depositLabel">Monthly client deposit</label>
-              <div class="input-prefix"><span aria-hidden="true">$</span><input id="deposit" name="deposit" type="number" inputmode="decimal" min="0" step="100" value="5000" aria-describedby="deposit-help deposit-error"></div>
-              <p class="field-help" id="deposit-help" data-i18n="calculator.depositHelp">Use a monthly amount for this estimate.</p>
-              <p class="field-error" id="deposit-error" role="alert" hidden></p>
-              <div class="quick-values" role="group" aria-label="Monthly amount examples" data-i18n-aria-label="calculator.quickValuesLabel">
-                <button type="button" data-deposit="5000">$5k/mo</button>
-                <button type="button" data-deposit="20000">$20k/mo</button>
-                <button type="button" data-deposit="50000">$50k/mo</button>
-                <button type="button" data-deposit="100000">$100k/mo</button>
-              </div>
+              <div class="slider-heading"><label for="clientCount" data-i18n="calculator.clientCountLabel">Number of clients</label><strong class="slider-value" data-result="clients">10</strong></div>
+              <input id="clientCount" name="clientCount" class="range-slider" type="range" min="1" max="50" step="1" value="10" aria-describedby="clientCount-help">
+              <div class="slider-scale" aria-hidden="true"><span>1</span><span>50</span></div>
+              <p class="field-help" id="clientCount-help" data-i18n="calculator.clientCountHelp">Number of clients you refer.</p>
+            </div>
+            <div class="field-group">
+              <div class="slider-heading"><label for="deposit" data-i18n="calculator.depositLabel">Client deposit</label><strong class="slider-value" data-result="deposit">$50,000</strong></div>
+              <input id="deposit" name="deposit" class="range-slider" type="range" min="5000" max="500000" step="5000" value="50000" aria-describedby="deposit-help">
+              <div class="slider-scale" aria-hidden="true"><span>$5K</span><span>$500K</span></div>
+              <p class="field-help" id="deposit-help" data-i18n="calculator.depositHelp">Average deposit per referred client.</p>
             </div>
             <fieldset class="field-group service-fee-group">
               <legend data-i18n="calculator.serviceFeeLabel">Client service fee</legend>
@@ -119,22 +119,20 @@
             <p class="calculator-note" data-i18n="calculator.ruleNote">The base rate is determined by the selected client service fee.</p>
           </form>
           <div class="calculation-result" aria-live="polite" aria-atomic="true">
-            <div class="yearly-result">
-              <div class="yearly-result-top"><p class="mini-label" data-i18n="calculator.yearlyLabel">ESTIMATED YEARLY COMMISSION</p><span class="example-badge" data-i18n="calculator.exampleBadge">Example</span></div>
-              <div class="yearly-figure"><strong data-result="yearly">$600</strong><span data-i18n="calculator.perYear">per year</span></div>
-              <p class="yearly-support" data-i18n="calculator.yearlySupport">Estimated commission for the next 12 months, based on the current monthly client deposit.</p>
-              <p class="yearly-rate"><strong data-result="rate">1.0%</strong> <span data-i18n="calculator.rateResult">commission rate</span></p>
-            </div>
-            <div class="calc-formula" aria-label="Commission formula" data-i18n-aria-label="calculator.formulaLabel">
-              <div class="calc-formula-item"><span data-i18n="calculator.depositResult">Monthly deposit</span><strong data-result="deposit">$5,000</strong></div>
+            <div class="result-header"><p class="mini-label" data-i18n="calculator.resultLabel">EXAMPLE CALCULATION</p><span class="example-badge" data-i18n="calculator.exampleBadge">Example</span></div>
+            <div class="calc-formula calc-formula-primary" aria-label="Total client deposits formula" data-i18n-aria-label="calculator.formulaLabelTotal">
+              <div class="calc-formula-item"><span data-i18n="calculator.clientsResult">Clients</span><strong data-result="clients">10</strong></div>
               <span class="calc-formula-operator" aria-hidden="true">×</span>
-              <div class="calc-formula-item"><span data-i18n="calculator.rateResult">Commission rate</span><strong data-result="rate">1.0%</strong></div>
-              <span class="calc-formula-operator" aria-hidden="true">×</span>
-              <div class="calc-formula-item"><span data-i18n="calculator.monthsLabel">Months</span><strong>12</strong></div>
+              <div class="calc-formula-item"><span data-i18n="calculator.depositResult">Avg. client deposit</span><strong data-result="deposit">$50,000</strong></div>
               <span class="calc-formula-operator calc-formula-equals" aria-hidden="true">=</span>
-              <div class="calc-formula-item calc-formula-total"><span data-i18n="calculator.yearlyResult">Yearly commission</span><strong data-result="yearly">$600</strong></div>
+              <div class="calc-formula-item calc-formula-total"><span data-i18n="calculator.totalResult">Total client deposits</span><strong data-result="total">$500,000</strong></div>
             </div>
-            <p class="result-disclaimer" data-i18n="calculator.disclaimer">Estimate assumes the same monthly client deposit for 12 months. Actual commission may vary.</p>
+            <div class="calc-formula calc-formula-secondary" aria-label="Estimated commission formula" data-i18n-aria-label="calculator.formulaLabelCommission">
+              <div class="calc-formula-item"><span data-i18n="calculator.rateResult">Commission rate</span><strong data-result="rate">1.0%</strong></div>
+              <span class="calc-formula-operator calc-formula-equals" aria-hidden="true">=</span>
+              <div class="calc-formula-item calc-formula-total"><span data-i18n="calculator.commissionResult">Estimated commission</span><strong data-result="commission">$5,000</strong></div>
+            </div>
+            <p class="result-disclaimer" data-i18n="calculator.disclaimer">Calculation only. Actual commission depends on applicable business rules and recorded client activity. This is not a guarantee of income.</p>
             <a class="text-link" href="https://t.me/fun_referrer_bot" target="_blank" rel="noopener noreferrer"><span data-i18n="calculator.link">Apply to become a Referrer</span><span aria-hidden="true">↗</span></a>
           </div>
         </div>
